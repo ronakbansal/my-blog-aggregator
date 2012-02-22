@@ -1,7 +1,7 @@
 Amit::Application.routes.draw do
   devise_for :admins, :path_names => { :sign_in => 'login', :sign_out => 'logout'}
   
-  devise_scope :admins do 
+  devise_scope :admin do 
     get "login", :to => "devise/sessions#new"
     get "logout", :to => "devise/sessions#destroy"
   end 
